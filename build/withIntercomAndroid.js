@@ -226,9 +226,9 @@ const modifyMainApplication = ({ contents, apiKey, appId, packageName, }) => {
 async function setEURegionTrueAsync(config, androidManifest) {
     // Get the <application /> tag and assert if it doesn't exist.
     const mainApplication = getMainApplicationOrThrow(androidManifest);
-    addMetaDataItemToMainApplication(mainApplication,
+    addMetaDataItemToMainApplication(mainApplication, 
     // value for `android:name`
-    "io.intercom.android.sdk.server.region",
+    "io.intercom.android.sdk.server.region", 
     // value for `android:value`
     "@integer/intercom_server_region_eu");
     return androidManifest;
