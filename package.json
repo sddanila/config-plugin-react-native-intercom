@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@types/semver": "^7.3.13",
-    "expo-module-scripts": "^3.0.4"
+    "expo-module-scripts": "^3.4.0"
   },
   "gitHead": "8c3e2de293395aeec0a546b8794370125e8c3c2e"
 }

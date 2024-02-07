@@ -3485,7 +3485,7 @@ __metadata:
     "@expo/config-plugins": ~7.2.2
     "@expo/image-utils": ^0.4.1
     "@types/semver": ^7.3.13
-    expo-module-scripts: ^3.0.4
+    expo-module-scripts: ^3.4.0
     semver: ^7.3.8
   peerDependencies:
     "@intercom/intercom-react-native": ^4.0.1
@@ -3680,9 +3680,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.648":
-  version: 1.4.659
-  resolution: "electron-to-chromium@npm:1.4.659"
-  checksum: de66233ea6e3b00d8da3a8ba5242e6fa54e596345f27ac0554c5c8b1cf5f3d20711089b4bb7270a9607e1597153619407c2bdaa13ad944730ce99f17f68d4c5f
+  version: 1.4.660
+  resolution: "electron-to-chromium@npm:1.4.660"
+  checksum: ca577e8ec7065479249cf7aefd1fe55907f2c24ed0daf651451600348d62099a99dc3f4aec2ef9599ad04624a9e970217c0279cccd6e89e0d5f50ec6c913129f
   languageName: node
   linkType: hard
 
@@ -4125,7 +4125,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-module-scripts@npm:^3.0.4":
+"expo-module-scripts@npm:^3.4.0":
   version: 3.4.1
   resolution: "expo-module-scripts@npm:3.4.1"
   dependencies:
