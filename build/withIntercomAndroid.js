@@ -207,16 +207,16 @@ const modifyMainApplication = ({ contents, apiKey, appId, packageName, }) => {
     if (!packageName) {
         throw new Error("Android package not found");
     }
-    const importLine = `import com.intercom.reactnative.IntercomModule;`;
+    const importLine = `import com.intercom.reactnative.IntercomModule`;
     if (!contents.includes(importLine)) {
-        const packageImport = `package ${packageName};`;
+        const packageImport = `package ${packageName}`;
         // Add the import line to the top of the file
         // Replace the first line with the intercom import
         contents = contents.replace(`${packageImport}`, `${packageImport}\n${importLine}`);
     }
-    const initLine = `IntercomModule.initialize(this, "${apiKey}", "${appId}");`;
+    const initLine = `IntercomModule.initialize(this, "${apiKey}", "${appId}")`;
     if (!contents.includes(initLine)) {
-        const soLoaderLine = `SoLoader.init(this, /* native exopackage */ false);`;
+        const soLoaderLine = `SoLoader.init(this, /* native exopackage */ false)`;
         // Replace the line SoLoader.init(this, /* native exopackage */ false); with regex
         contents = contents.replace(`${soLoaderLine}`, `${soLoaderLine}\n\t\t${initLine}\n`);
     }
@@ -226,9 +226,9 @@ const modifyMainApplication = ({ contents, apiKey, appId, packageName, }) => {
 async function setEURegionTrueAsync(config, androidManifest) {
     // Get the <application /> tag and assert if it doesn't exist.
     const mainApplication = getMainApplicationOrThrow(androidManifest);
-    addMetaDataItemToMainApplication(mainApplication, 
+    addMetaDataItemToMainApplication(mainApplication,
     // value for `android:name`
-    "io.intercom.android.sdk.server.region", 
+    "io.intercom.android.sdk.server.region",
     // value for `android:value`
     "@integer/intercom_server_region_eu");
     return androidManifest;
